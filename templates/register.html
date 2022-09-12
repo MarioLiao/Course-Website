@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
+        <title>Register</title>
+
+    </head>
+
+    <body>
+
+        <div class = "header">
+
+            <h1>Register</h1>
+
+        </div>
+
+        <div class = "break">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+
+        <div class = "info">
+
+            <form action="http://127.0.0.1:5000/register" method = "post">
+                <label for="username">Username</label>
+                <br>
+                <input type="text" id="Username" name="Username">
+                <br>
+                <label for="password">Password</label>
+                <br>
+                <input type="text" id="Password" name="Password">
+                <br>
+                <label for="role">Role (Enter "student" or "instructor")</label>
+                <br>
+                <input type="text" id="Role" name="Role">
+                <br>
+                <button type="register">Register</button>
+            </form>
+
+        </div>
+
+        <div class = "login">
+
+            <a href="{{ url_for('login') }}">Go To Login</a>
+
+        </div>
+
+        <footer>
+
+            <p>Site designed by: Mario Liao</p>
+            <a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">Faculty of Computer Science at UofT </a>
+
+        </footer>
+
+    </body>
+
+</html>

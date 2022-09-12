@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/studentcontents.css') }}">
+        <title>Student's Table of Contents</title>
+
+    </head>
+
+    <body>
+
+        <div class = "header">
+
+            <h1>Table Of Contents</h1>
+
+        </div>
+
+        <div class = "break">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+
+        <div class = "welcome">
+
+            <h2>Welcome To The Student's Page, {{ username }}</h2>
+
+        </div>
+
+        <div class = "tableOfContents">
+
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('lectures') }}">Lectures</a>
+            <a href="{{ url_for('labs') }}">Labs</a>
+            <a href="{{ url_for('assignments') }}">Assignments</a>
+            <a href="{{ url_for('test') }}">Test</a>
+            <a href="{{ url_for('resources') }}">Resources</a>
+            <a href="{{ url_for('courseteam') }}">CourseTeam</a>
+            <a href="{{ url_for('faq') }}">FAQ</a>
+            <a href="{{ url_for('studentgrades', username=username) }}">View Your Grades</a>
+            <a href="{{ url_for('studentfeedback', username=username) }}">Send Feedback</a>
+
+        </div>
+
+        <footer>
+
+            <p>Site designed by: Mario Liao</p>
+            <a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">Faculty of Computer Science at UofT </a>
+
+        </footer>
+
+    </body>
+
+</html>

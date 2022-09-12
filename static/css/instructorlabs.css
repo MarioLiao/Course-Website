@@ -1,0 +1,102 @@
+.header {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    height: 125px;
+    background: rgb(241, 239, 239);
+    color: #030303;
+    position: fixed;
+    left: -300px;
+    width: 2500px;
+    top: 0px;
+}
+
+h1 {
+    font-size: 100px;
+    font-weight: bold;
+    text-align: center;
+}
+
+body {
+    background-color: rgb(137, 220, 231);
+    max-width: 2000px;
+    margin: auto;
+}
+
+a:link {
+    color: rgb(115, 115, 238);
+}
+
+a:hover {
+    color: blue;
+}
+
+a:active {
+    color: rgb(218, 40, 40);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+    background: rgb(241, 239, 239);
+    color: #030303;
+    width: 200px;
+    position: fixed;
+    bottom: 0;
+}
+
+.grades_table {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+table {
+    border: 1;
+    text-align: center;
+}
+
+th {
+    background: rgb(177, 175, 175);
+    font-size: 40px;
+    border: 3px solid rgb(5, 5, 5);
+    padding: 8px;
+}
+  
+td {
+    border: 1px solid rgb(10, 10, 10);
+    padding: 8px;
+    font-size: 30px;
+}
+  
+tr {
+    background: #efefef;
+}
+  
+tr:hover {
+    background: #d1d1d1;
+}
+
+@media screen and (max-width: 40em) {
+
+    .header {
+        left: 0px;
+        width: 650px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    th {
+        font-size: 20px;
+    }
+
+    td {
+        font-size: 15px;
+    }
+    
+}

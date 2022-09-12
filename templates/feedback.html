@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/feedback.css') }}">
+        <title>Anon Feedback</title>
+
+    </head>
+
+    <body>
+
+        <div class = "header">
+
+            <h1>Anon Feedback</h1>
+
+        </div>
+
+        <div class = "break">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+
+        <div class = "feedbackInfo">
+
+            <div class = "info">
+
+                <form>
+                    <label for="rateDifficulty">Please rate the difficulty of the course material (1 being easiest and 5 being hardest):</label>
+                    <br>
+                    <input type="text" name="difficultyInput" placeholder="Enter a number between 1-5">
+                    <br>
+                    <label for="avgHours">Please rate the average amount of hours spend every week on CSCB20:</label>
+                    <br>
+                    <input type="text" name="hourInput" placeholder="Enter a number">
+                    <br>
+                    <label for="rateRecommend">Please enter how much you would recommend others to take CSCB20 (1 being least recommended, 5 being most recommended):</label>
+                    <br>
+                    <input type="text" name="recommendInput" placeholder="Enter a number between 1-5">
+                    <br>
+                    <label for="moreTopic">Please enter a topic you wish the course spend more time on:</label>
+                    <br>
+                    <input type="text" name="topicInput" placeholder="Enter a topic">
+                    <br>
+                    <label for="rateInstructor">Please enter how well you believe the instructor did for teaching CSCB20 (1 being very poor, 5 being very excellent):</label>
+                    <br>
+                    <input type="text" name="instructorInput" placeholder="Enter a number between 1-5">
+                    <br>
+                    <input type="submit" name="feedbackSubmit" value="submit">
+                </form>
+
+
+            </div>
+
+        </div>
+
+        <footer>
+
+            <p>Site designed by: Mario Liao</p>
+            <a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">Faculty of Computer Science at UofT </a>
+
+        </footer>
+
+    </body>
+
+</html>

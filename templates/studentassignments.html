@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/studentassignments.css') }}">
+        <title>Assignment Grades</title>
+
+    </head>
+
+    <body>
+
+        <div class = "header">
+
+            <h1>{{ username }}'s Assignment Grades</h1>
+
+        </div>
+
+        <div class = "break">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+
+        <table class = "grades_table">
+
+            <tr>
+                <th>Assignment #</th>
+                <th>Mark</th>
+            </tr>
+            
+            {% for Assignment in users_assignment_result %}
+            <tr>
+                <td> {{ Assignment.assignment_number }}</td>
+                <td> {{ Assignment.mark }}%</td> 
+            </tr>
+            {% endfor %}
+
+        </table>
+
+        <br>
+
+        <table class = "remark_table">
+
+            <tr>
+                <th>Remark Request Description</th>
+                <th>Assignment #</th>
+            </tr>
+
+            <tr>
+                <form action="http://127.0.0.1:5000/studentassignments/{{username}}" method = "post">
+                    <td>
+                        <label for="remarkrequest"></label>
+                        <textarea rows="4" cols="50" id="text" name="RemarkRequest"></textarea>  
+                    </td>
+                    <td>
+                        <label for="assignmentnumber"></label>
+                        <select name="AssignmentNumber" id="AssignmentNumber">
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button type="submit">Submit</button>
+                    </td>
+                </form>
+            </tr>
+
+        </table>
+
+        <footer>
+
+            <p>Site designed by: Mario Liao</p>
+            <a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">Faculty of Computer Science at UofT </a>
+
+        </footer>
+
+    </body>
+
+</html>

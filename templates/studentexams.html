@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/studentexams.css') }}">
+        <title>Exam Grades</title>
+
+    </head>
+
+    <body>
+
+        <div class = "header">
+
+            <h1>{{ username }}'s Exam Grades</h1>
+
+        </div>
+
+        <div class = "break">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+
+        <table class = "grades_table">
+
+            <tr>
+                <th>Type</th>
+                <th>Mark</th>
+            </tr>
+            
+            {% for Exam in users_exam_result %}
+            <tr>
+                <td> {{ Exam.type }}</td>
+                <td> {{ Exam.mark }}%</td> 
+            </tr>
+            {% endfor %}
+
+        </table>
+
+        <br>
+
+        <table class = "remark_table">
+
+            <tr>
+                <th>Remark Request Description</th>
+                <th>Exam Type</th>
+            </tr>
+
+            <tr>
+                <form action="http://127.0.0.1:5000/studentexams/{{username}}" method = "post">
+                    <td>
+                        <label for="remarkrequest"></label>
+                        <textarea rows="4" cols="50" id="text" name="RemarkRequest"></textarea>  
+                    </td>
+                    <td>
+                        <label for="examtype"></label>
+                        <select name="ExamType" id="ExamType">
+                            <option value="Midterm">Midterm</option>
+                            <option value="Final Exam">Final Exam</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button type="submit">Submit</button>
+                    </td>
+                </form>
+            </tr>
+
+        </table>
+
+        <footer>
+
+            <p>Site designed by: Mario Liao</p>
+            <a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">Faculty of Computer Science at UofT </a>
+
+        </footer>
+
+    </body>
+
+</html>

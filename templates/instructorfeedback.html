@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/instructorfeedback.css') }}">
+        <title>Instructor Feedback</title>
+
+    </head>
+
+    <body>
+
+        <div class = "header">
+
+            <h1>{{ username }}'s Feedback From Students</h1>
+
+        </div>
+
+        <div class = "break">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+
+        <table class = "feedback_table">
+
+            <tr>
+                <th>What do you like about the instructor teaching?</th>
+                <th>What do you recommend the instructor to do to improve their teaching?</th>
+                <th>What do you like about the labs?</th>
+                <th>What do you recommend the lab instructors to do to improve their lab teaching?</th>
+            </tr>
+            
+            {% for Feedback in users_feedback_result %}
+            <tr>
+                <td> {{ Feedback.answer_one }}</td>
+                <td> {{ Feedback.answer_two }}</td>
+                <td> {{ Feedback.answer_three }}</td>
+                <td> {{ Feedback.answer_four }}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+
+        <br>
+
+        <footer>
+
+            <p>Site designed by: Mario Liao</p>
+            <a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">Faculty of Computer Science at UofT </a>
+
+        </footer>
+
+    </body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/instructormark.css') }}">
+        <title>Instructor Marking</title>
+
+    </head>
+
+    <body>
+
+        <div class = "header">
+
+            <h1>Marking Your Students</h1>
+
+        </div>
+
+        <div class = "break">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+
+        <table class = "mark_table">
+
+            <tr>
+                <th>Select Username</th>
+                <th>Select Category</th>
+                <th>Select Number (For Assignments 1-3, Labs 1-12, Exams 0)</th>
+                <th>Enter Grade (0-100)</th>
+            </tr>
+
+            <tr>
+                <form action="http://127.0.0.1:5000/instructormark/{{username}}" method = "post">
+                    <td>
+                        <select name="SelectStudent" id="SelectStudent">
+                            {% for student in users_student_result %}
+                            <option value="{{student}}">{{ student }}</option>
+                            {% endfor %}
+                        </select> 
+                    </td>
+                    <td>
+                        <label for="category"></label>
+                        <select name="Category" id="Category">
+                            <option value="Assignment">Assignment</option>
+                            <option value="Lab">Lab</option>
+                            <option value="Midterm">Midterm</option>
+                            <option value="Final Exam">Final Exam</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label for="number"></label>
+                        <select name="Number" id="Number">
+                            <option value=0>0</option>
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5</option>
+                            <option value=6>6</option>
+                            <option value=7>7</option>
+                            <option value=8>8</option>
+                            <option value=9>9</option>
+                            <option value=10>10</option>
+                            <option value=11>11</option>
+                            <option value=12>12</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label for="entergrade"></label>
+                        <textarea rows="4" cols="50" id="text" name="EnterGrade"></textarea>  
+                    </td>
+                    <td>
+                        <button type="submit">Submit</button>
+                    </td>
+                </form>
+            </tr>
+
+        </table>
+
+        <footer>
+
+            <p>Site designed by: Mario Liao</p>
+            <a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">Faculty of Computer Science at UofT </a>
+
+        </footer>
+
+    </body>
+
+</html>

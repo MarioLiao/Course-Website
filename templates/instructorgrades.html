@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/instructorgrades.css') }}">
+        <title>Instructor's Grades</title>
+
+    </head>
+
+    <body>
+
+        <div class = "header">
+
+            <h1>View Your Student's Grades</h1>
+
+        </div>
+
+        <div class = "break">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+
+        <div class = "tableOfContents">
+
+            <a href="{{ url_for('instructorassignments', username=username) }}">Assignment's Grades</a>
+            <a href="{{ url_for('instructorlabs', username=username) }}">Lab's Grades</a>
+            <a href="{{ url_for('instructorexams', username=username) }}">Exam's Grades</a>
+
+        </div>
+
+        <footer>
+
+            <p>Site designed by: Mario Liao</p>
+            <a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">Faculty of Computer Science at UofT </a>
+
+        </footer>
+
+    </body>
+
+</html>

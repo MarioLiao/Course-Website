@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/instructorexams.css') }}">
+        <title>Exam Grades</title>
+
+    </head>
+
+    <body>
+
+        <div class = "header">
+
+            <h1>Your Student's Exam Grades</h1>
+
+        </div>
+
+        <div class = "break">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+
+        <table class = "grades_table">
+
+            <tr>
+                <th>Username</th>
+                <th>Type</th>
+                <th>Mark</th>
+            </tr>
+            
+            {% for Exam in users_exam_result %}
+            <tr>
+                <td> {{ Exam.username }}</td>
+                <td> {{ Exam.type }}</td>
+                <td> {{ Exam.mark }}%</td> 
+            </tr>
+            {% endfor %}
+
+        </table>
+
+        <br>
+
+        <footer>
+
+            <p>Site designed by: Mario Liao</p>
+            <a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">Faculty of Computer Science at UofT </a>
+
+        </footer>
+
+    </body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/instructorremark.css') }}">
+        <title>Remark Request</title>
+
+    </head>
+
+    <body>
+
+        <div class = "header">
+
+            <h1>{{ username }}'s Students Remark Request</h1>
+
+        </div>
+
+        <div class = "break">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+
+        <table class = "remark_request_table">
+
+            <tr>
+                <th>Username</th>
+                <th>Category</th>
+                <th>Number #</th>
+                <th>Description</th>
+            </tr>
+            
+            {% for Remark in users_remark_result %}
+            <tr>
+                <td> {{ Remark.username }}</td>
+                <td> {{ Remark.category }}</td> 
+                <td> {{ Remark.type_number }}</td>
+                <td> {{ Remark.description }}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+
+        <br>
+
+        <footer>
+
+            <p>Site designed by: Mario Liao</p>
+            <a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">Faculty of Computer Science at UofT </a>
+
+        </footer>
+
+    </body>
+
+</html>

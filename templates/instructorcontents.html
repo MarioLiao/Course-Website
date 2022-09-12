@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/instructorcontents.css') }}">
+        <title>Instructor's Table of Contents</title>
+
+    </head>
+
+    <body>
+
+        <div class = "header">
+
+            <h1>Table Of Contents</h1>
+
+        </div>
+
+        <div class = "break">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+
+        <div class = "welcome">
+
+            <h2>Welcome To The Instructor's Page, {{ username }}</h2>
+
+        </div>
+
+        <div class = "tableOfContents">
+
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('lectures') }}">Lectures</a>
+            <a href="{{ url_for('labs') }}">Labs</a>
+            <a href="{{ url_for('assignments') }}">Assignments</a>
+            <a href="{{ url_for('test') }}">Test</a>
+            <a href="{{ url_for('resources') }}">Resources</a>
+            <a href="{{ url_for('courseteam') }}">CourseTeam</a>
+            <a href="{{ url_for('faq') }}">FAQ</a>
+            <a href="{{ url_for('instructorgrades', username=username) }}">View Student's Grades</a>
+            <a href="{{ url_for('instructorfeedback', username=username) }}">View Student's Feedback</a>
+            <a href="{{ url_for('instructorremark', username=username) }}">View Student's Remark Request</a>
+            <a href="{{ url_for('instructormark', username=username) }}">Enter Student Marks</a>
+
+        </div>
+
+        <footer>
+
+            <p>Site designed by: Mario Liao</p>
+            <a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">Faculty of Computer Science at UofT </a>
+
+        </footer>
+
+    </body>
+
+</html>
